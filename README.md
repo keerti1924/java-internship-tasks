@@ -22,9 +22,9 @@ Welcome to the Java FSD Internship tasks repository. This repository serves as a
 
 ## Internship Details
 
-- Internship Program: Java Full-Stack Web Development
-- Company/Organization: IBM
-- Internship Period: 5 Months
+- **Internship Program** - Java Full-Stack Web Development
+- **Company/Organization** - IBM
+- **Internship Period** - 5 Months
 
 ## Repository Structure
 
