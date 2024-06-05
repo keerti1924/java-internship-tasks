@@ -1,1 +1,0 @@
-In Java, we can append a string in an existing file using FileWriter which has an option to open a file in append mode. 'This is the text to append.'
