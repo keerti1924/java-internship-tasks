@@ -19,28 +19,34 @@ This application is a simple Java Swing GUI that allows users to input their nam
 ## Usage
 
 ### 1) Initial State of the Application
+   - Description: The application is launched showing fields for "Name" and "Age", and buttons for "Submit" and "Reset".
+     
    ![Initial State](images/screenshot1.png)
-   Description: The application is launched showing fields for "Name" and "Age", and buttons for "Submit" and "Reset".
 
 ### 2) Empty Fields Validation
+   - Description Message displayed when both fields are empty and the "Submit" button is pressed.
+     
    ![Empty Fields](images/screenshot2.png)
-   Description Message displayed when both fields are empty and the "Submit" button is pressed.
 
 ### 3) Name Field Filled, Age Field Empty
+   - Description: Message displayed when the name field is filled, but the age field is empty, and "Submit" is pressed.
+     
    ![Name Field Filled, Age Field Empty](images/screenshot3.png)
-   Description: Message displayed when the name field is filled, but the age field is empty, and "Submit" is pressed.
 
 ### 4) Valid Input, Age 18 or More
+   - Description: Message displayed when both fields are filled, and the age is 18 or more.
+     
    ![Age 18 or More](images/screenshot4.png)
-   Description: Message displayed when both fields are filled, and the age is 18 or more.
 
 ### 5) Valid Input, Age Less Than 18
+   - Description: Message displayed when both fields are filled, and the age is less than 18.
+     
    ![Age Less Than 18](images/screenshot5.png)
-   Description: Message displayed when both fields are filled, and the age is less than 18.
 
 ### 6) Reset Functionality
+   - Description: Application state after the "Reset" button is pressed, clearing the fields.
+     
    ![Reset Fields](images/screenshot6.png)
-   Description: Application state after the "Reset" button is pressed, clearing the fields.
 
 ## How to Run
 
