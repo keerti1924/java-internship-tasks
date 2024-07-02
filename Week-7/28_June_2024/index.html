@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <body> 
+        <h1>Modifying HTML with JavaScript</h1>  
+        
+        <p id="para1">JavaScript is powerful!</p> 
+        <p id="para2">It can manipulate HTML.</p>
+        
+        <button onclick="myClickFunction()">Hello</button>  <br><br>
+
+        <script type="text/javascript"> 
+            var string1 = "JavaScript is a powerful language "; 
+            var string2 = "and developers use it to make the web dynamic."; 
+
+            var newString = string1 + string2; 
+            
+            document.write(newString);
+            document.getElementById("para2").style.color = "red"; 
+            function myClickFunction() { 
+                alert("Welcome to the JavaScript alert message!"); 
+            } 
+        </script> 
+   </body> 
+</body>
+</html>

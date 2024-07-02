@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Webpage</title>
+</head>
+<style> 
+    div { 
+        font-weight:bold; 
+        color: black; 
+        font-size: 20px; 
+    } 
+</style> 
+<body>
+    <div id="click-demo"> 
+        The onclick event attribute reacts when a user clicks. You can change 
+        the background color of the box, change the text font, count how many
+        times the user clicks, and more! Click here in this box to see what you 
+        can do with the onclick attribute, and a little bit of JavaScript. When 
+        you combine JavaScript with HTML and CSS, you can make your web 
+        pages come alive! 
+     </div><br>
+     <button onclick="myClickFunction()">Click to text Italtic</button> 
+     <script>
+        function myClickFunction(){       
+        var elementName = document.getElementById("click-demo");  
+
+        if (elementName.style.fontStyle != "italic"){ 
+            elementName.style.fontStyle = "italic"; 
+        } 
+        else{ 
+            elementName.style.fontStyle = "normal"; 
+        } 
+    } 
+     </script>
+</body>
+</html>
