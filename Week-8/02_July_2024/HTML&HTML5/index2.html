@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        header, nav, section, article, footer {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="color: chocolate;">HTML5 Features</h1>
+            <nav>
+                <ul>
+                    <li><a href="#text-formatting">Text Formatting</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#embedded-content">Embedded Content</a></li>
+                    <li><a href="#semantic-elements">Semantic Elements</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="text-formatting">
+            <h2>1) Text Formatting</h2>
+            <p><strong>Bold text</strong></p>
+            <p><em>Italic text</em></p>
+            <p><u>Underlined text</u></p>
+            <p><s>Strikethrough text</s></p>
+            <p><mark>Highlighted text</mark></p>
+            <p><small>Small text</small></p>
+            <p><code>Inline code</code></p>
+            <p>Subscript: H<sub>2</sub>O</p>
+            <p>Superscript: E = mc<sup>2</sup></p>
+            <blockquote cite="https://www.example.com">
+                This is a blockquote from an external source.
+            </blockquote>
+        </section>
+
+        <section id="multimedia">
+            <h2>2) Multimedia</h2>
+            <h3>i) Audio</h3>
+            <audio controls>
+                <source src="assets/audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>ii) Video</h3>
+            <video controls width="400">
+                <source src="assets/video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <section id="forms">
+            <h2>3) Forms</h2>
+            <center>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Registration Form</legend><br>
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" id="name" name="name"><br><br>
+    
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" id="email" name="email"><br><br>
+    
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" id="password" name="password"><br><br>
+    
+                        <label for="date"><b>Date</b></label>
+                        <input type="date" id="date" name="date"><br><br>
+
+                        <label for="color"><b>Favorite Color</b></label>
+                        <input type="color" id="color" name="color"><br><br>
+
+                        <label for="range"><b>Range</b></label>
+                        <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+                        <label for="gender"><b>Gender</b></label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br><br>
+    
+                        <label for="hobbies"><b>Hobbies</b></label>
+                        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                        <label for="hobby1">Reading</label>
+                        <input type="checkbox" id="hobby2" name="hobbies" value="travelling">
+                        <label for="hobby2">Travelling</label><br><br>
+    
+                        <label for="country"><b>Country</b></label>
+                        <select id="country" name="country">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">UK</option>
+                        </select><br><br>
+    
+                        <label for="message"><b>Message</b></label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </center>
+        </section>
+
+        <section id="tables">
+            <h2>4) Tables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keerti Sharma</td>
+                        <td>keerti@gmail.com</td>
+                        <td>24</td>
+                        <td>Bangalore</td>
+                    </tr>
+                    <tr>
+                        <td>Ajay Kumar</td>
+                        <td>ajay@gmail.com</td>
+                        <td>25</td>
+                        <td>Lucknow</td>
+                    </tr>
+                    <tr>
+                        <td>Ankit</td>
+                        <td>ankit@gmail.com</td>
+                        <td>23</td>
+                        <td>New Delhi</td>
+                    </tr>
+                    <tr>
+                        <td>Reeta</td>
+                        <td>reeta@gmail.com</td>
+                        <td>22</td>
+                        <td>Kanpur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="embedded-content">
+            <h2>5) Embedded Content</h2>
+            <h3>i) Iframe</h3>
+            <iframe src="https://www.example.com" width="600" height="400"></iframe>
+        </section>
+
+        <section id="semantic-elements">
+            <h2>6) Semantic Elements</h2>
+            <article>
+                <h3>i) Article Section</h3>
+                <p>This is an article element. It represents a self-contained piece of content.</p>
+            </article>
+            <aside>
+                <h3>ii) Aside Section</h3>
+                <p>This is an aside element. It represents content that is tangentially related to the content around it.</p>
+            </aside>
+            <figure>
+                <img src="assets/image.png" alt="HTML image"  height="300">
+                <figcaption>HTML5 Image</figcaption>
+            </figure>
+        </section>
+        
+        <center>
+            <footer>
+                <p>&copy; 2024 | Keerti Vishwkarma | HTML5 Features Webpage</p>
+            </footer>
+        </center>
+    </div>
+</body>
+</html>

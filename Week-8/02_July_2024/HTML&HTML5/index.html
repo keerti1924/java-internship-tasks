@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All HTML Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="color: chocolate;">HTML Features</h1>
+            <nav>
+                <ul>
+                    <li><a href="#text-formatting">Text Formatting</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#images">Images</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#embedded-content">Embedded Content</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="text-formatting">
+            <h2>1) Text Formatting</h2>
+            <p><strong>Bold text</strong></p>
+            <p><em>Italic text</em></p>
+            <p><u>Underlined text</u></p>
+            <p><s>Strikethrough text</s></p>
+            <p><mark>Highlighted text</mark></p>
+            <p><small>Small text</small></p>
+            <p><code>Inline code</code></p>
+            <p>Subscript: H<sub>2</sub>O</p>
+            <p>Superscript: E = mc<sup>2</sup></p>
+            <blockquote cite="https://www.google.com">
+                This is a blockquote from an external source.
+            </blockquote>
+        </section>
+
+        <section id="links">
+            <h2>2) Links</h2>
+            <p><a href="https://www.google.com" target="_blank">Visit Google</a></p>
+            <p><a href="#text-formatting">Jump to Text Formatting Section</a></p>
+        </section>
+
+        <section id="images">
+            <h2>3) Images</h2>
+            <figure>
+                <img src="assets/image.png" alt="Placeholder Image" height="200px">
+                <figcaption>HTML Image</figcaption>
+            </figure>
+        </section>
+
+        <section id="lists">
+            <h2>4) Lists</h2>
+            <h3>i) Unordered List</h3>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2
+                    <ul>
+                        <li>Subitem 1</li>
+                        <li>Subitem 2</li>
+                    </ul>
+                </li>
+                <li>Item 3</li>
+            </ul>
+            <h3>ii) Ordered List</h3>
+            <ol>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+            <h3>iii) Description List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>A markup language for creating web pages.</dd>
+                <dt>CSS</dt>
+                <dd>A stylesheet language for styling web pages.</dd>
+                <dt>JavaScript</dt>
+                <dd>A programming language for web development.</dd>
+            </dl>
+        </section>
+
+        <section id="tables">
+            <h2>5) Tables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Keerti Sharma</td>
+                        <td>keerti@gmail.com</td>
+                        <td>Bangalore</td>
+                    </tr>
+                    <tr>
+                        <td>Ajay Kumar</td>
+                        <td>ajay@gmail.com</td>
+                        <td>Lucknow</td>
+                    </tr>
+                    <tr>
+                        <td>Ankit</td>
+                        <td>ankit@gmail.com</td>
+                        <td>New Delhi</td>
+                    </tr>
+                    <tr>
+                        <td>Reeta</td>
+                        <td>reeta@gmail.com</td>
+                        <td>Kanpur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="forms">
+            <h2>6) Forms</h2>
+            <center>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Registration Form</legend><br>
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" id="name" name="name"><br><br>
+    
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" id="email" name="email"><br><br>
+    
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" id="password" name="password"><br><br>
+    
+                        <label for="gender"><b>Gender</b></label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br><br>
+    
+                        <label for="hobbies"><b>Hobbies</b></label>
+                        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                        <label for="hobby1">Reading</label>
+                        <input type="checkbox" id="hobby2" name="hobbies" value="travelling">
+                        <label for="hobby2">Travelling</label><br><br>
+    
+                        <label for="country"><b>Country</b></label>
+                        <select id="country" name="country">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">UK</option>
+                        </select><br><br>
+    
+                        <label for="message"><b>Message</b></label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </center>
+        </section>
+
+        <section id="embedded-content">
+            <h2>7) Embedded Content</h2>
+            <h3>i) Video</h3>
+            <video controls>
+                <source src="assets/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>ii) Audio</h3>
+            <audio controls>
+                <source src="assets/audio.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <h3>iii) Iframe</h3>
+            <iframe src="https://www.example.com" width="600" height="400"></iframe>
+        </section>
+        
+        <center>
+            <footer>
+                <p>&copy; 2024 | Keerti Vishwkarma | HTML Features Webpage</p>
+            </footer>
+        </center>
+    </div>
+</body>
+</html>
