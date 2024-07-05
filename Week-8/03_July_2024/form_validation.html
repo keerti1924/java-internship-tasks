@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Form Validation</h1>
+        <form id="myForm" novalidate class="my-5 border p-5 rounded bg-light shadow">
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="text">Name <span>*</span></label>
+                <input type="text" class="form-control" id="text" name="text" placeholder="Enter Your Name" required maxlength="30">
+                <div class="invalid-feedback">Please provide a valid name (max length 30).</div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email"  required>
+                <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">Password  <span>*</span></label>
+                <input type="password" class="form-control" id="password" name="password" required placeholder="Enter Your Password"  minlength="8">
+                <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+            </div>
+
+            <!-- Number Input -->
+            <div class="form-group">
+                <label for="number">Mobile Number <span>*</span></label>
+                <input type="number" class="form-control" id="number" name="number" placeholder="Enter Your Mobile Number"  required minlength="10">
+                <div class="invalid-feedback">Number must be at least 10 digits.</div>
+            </div>
+
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="date">Date of Birth <span>*</span></label>
+                <input type="date" class="form-control" id="date" name="date" required>
+                <div class="invalid-feedback">Please select a valid date.</div>
+            </div>
+
+           
+
+            
+            <!-- Radio Input -->
+            <div class="form-group">
+                <label>Gender  <span>*</span></label><br>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="male" name="gender" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="female" name="gender" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="invalid-feedback">Please select your gender.</div>
+            </div>
+            
+            <!-- Select Input -->
+            <div class="form-group">
+                <label for="select">State  <span>*</span></label>
+                <select class="form-control" id="select" name="select" required>
+                    <option value="">-- Select a state --</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                </select>
+                <div class="invalid-feedback">Please select a state.</div>
+            </div>
+            
+
+             <!-- URL Input -->
+             <div class="form-group">
+                <label for="url">URL</label>
+                <input type="url" class="form-control" id="url" name="url" placeholder="Enter Your Website URL" >
+                <div class="invalid-feedback">Please provide a valid URL.</div>
+            </div>
+
+
+            <!-- Custom Validation with JavaScript -->
+            <div class="form-group">
+                <label for="linked">Linkedin Profile Link  <span>*</span></label>
+                <input type="url" class="form-control" id="linked" name="linked" required placeholder="Enter Your Linkedin Profile Link" >
+                <div class="invalid-feedback">Please provide a valid URL.</div>
+            </div>
+
+
+            <!-- Checkbox Input -->
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox" required>
+                <label class="form-check-label" for="checkbox">Accept Terms & Conditions<span>*</span></label>
+                <div class="invalid-feedback">You must accept the terms.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-2">Register</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for custom validation and Bootstrap integration
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('myForm');
+
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+</body>
+</html>
