@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Control Flow, Functions, Arrays, and Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .output {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Control Flow, Functions, Arrays, and Objects</h1>
+
+    <h4>If-Else Statements</h4>
+    <div class="output" id="ifElseOutput"></div>
+
+    <h4>For Loops</h4>
+    <div class="output" id="forLoopOutput"></div>
+
+    <h4>While Loops</h4>
+    <div class="output" id="whileLoopOutput"></div>
+
+    <h4>Functions</h4>
+    <div class="output" id="functionsOutput"></div>
+
+    <h4>Arrays</h4>
+    <div class="output" id="arraysOutput"></div>
+
+    <h4>Objects</h4>
+    <div class="output" id="objectsOutput"></div>
+
+    <script>
+        // If-Else Statements
+        let age = 20;
+        let ifElseResult;
+
+        if (age < 18) {
+            ifElseResult = "You are a minor.";
+        } else if (age >= 18 && age < 65) {
+            ifElseResult = "You are an adult.";
+        } else {
+            ifElseResult = "You are a senior.";
+        }
+
+        document.getElementById("ifElseOutput").innerHTML = ifElseResult;
+
+        // For Loops
+        let forLoopResult = "";
+        for (let i = 0; i < 5; i++) {
+            forLoopResult += "Number: " + i + "<br>";
+        }
+
+        document.getElementById("forLoopOutput").innerHTML = forLoopResult;
+
+        // While Loops
+        let whileLoopResult = "";
+        let count = 0;
+        while (count < 5) {
+            whileLoopResult += "Count: " + count + "<br>";
+            count++;
+        }
+
+        document.getElementById("whileLoopOutput").innerHTML = whileLoopResult;
+
+        // Functions
+        function greet(name) {
+            return "Hello, " + name + "!<br> Welcome to our Website.";
+        }
+
+        let functionsResult = greet("Keerti");
+
+        document.getElementById("functionsOutput").innerHTML = functionsResult;
+
+        // Arrays
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let arraysResult = "<b>Fruits</b> = " + fruits.join(", ") + "<br>";
+
+        // Adding an item to the array
+        fruits.push("Orange");
+        arraysResult += "<b>After adding Orange</b> = " + fruits.join(", ") + "<br>";
+
+        // Removing the last item from the array
+        fruits.pop();
+        arraysResult += "<b>After removing the last item </b>= " + fruits.join(", ") + "<br>";
+
+        // Looping through the array
+        arraysResult += "<br><b>Looping through the array</b><br>";
+        fruits.forEach(function(fruit, index) {
+            arraysResult += "Fruit " + (index + 1) + " = " + fruit + "<br>";
+        });
+
+        document.getElementById("arraysOutput").innerHTML = arraysResult;
+
+        // Objects
+        let person = {
+            firstName: "Keerti",
+            lastName: "Vishwkarma",
+            age: 30,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        let objectsResult = "First Name = " + person.firstName + "<br>";
+        objectsResult += "Last Name = " + person.lastName + "<br>";
+        objectsResult += "Age = " + person.age + "<br>";
+        objectsResult += "Full Name = " + person.fullName() + "<br>";
+
+        // Adding a new property to the object
+        person.job = "Developer";
+        objectsResult += "Job = " + person.job + "<br>";
+
+        // Looping through the object properties
+        objectsResult += "<br><b>Looping through object properties</b><br>";
+        for (let key in person) {
+            objectsResult += key + " : " + person[key] + "<br>";
+        }
+
+        document.getElementById("objectsOutput").innerHTML = objectsResult;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .output {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Basics</h1>
+
+    <h2>Variables</h2>
+    <div class="output" id="variablesOutput"></div>
+
+    <h2>Data Types</h2>
+    <div class="output" id="dataTypesOutput"></div>
+
+    <h2>Operators</h2>
+    <div class="output" id="operatorsOutput"></div>
+
+    <h2>Expressions</h2>
+    <div class="output" id="expressionsOutput"></div>
+
+    <script>
+        // Variables
+        var name = "Alice";
+        let age = 30;
+        const isStudent = true;
+
+        document.getElementById("variablesOutput").innerHTML = `
+            Name: ${name} <br>
+            Age: ${age} <br>
+            Is Student: ${isStudent}
+        `;
+
+        // Data Types
+        let greeting = "Hello, World!";
+        let number = 42;
+        let isJavaScriptFun = true;
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30
+        };
+        let numbers = [1, 2, 3, 4, 5];
+
+        document.getElementById("dataTypesOutput").innerHTML = `
+            String: ${greeting} <br>
+            Number: ${number} <br>
+            Boolean: ${isJavaScriptFun} <br>
+            Object: ${JSON.stringify(person)} <br>
+            Array: ${numbers.join(", ")}
+        `;
+
+        // Operators
+        let a = 10;
+        let b = 5;
+        let x = 10;
+        x += 5; // Equivalent to x = x + 5
+
+        let isEqual = (a == b);
+        let isNotEqual = (a != b);
+
+        let isTrue = (a > b) && (b < 10);
+        let isFalse = (a < b) || (b > 10);
+
+        document.getElementById("operatorsOutput").innerHTML = `
+            Addition: ${a + b} <br>
+            Subtraction: ${a - b} <br>
+            Multiplication: ${a * b} <br>
+            Division: ${a / b} <br>
+            x after += 5: ${x} <br>
+            Is equal: ${isEqual} <br>
+            Is not equal: ${isNotEqual} <br>
+            Is true: ${isTrue} <br>
+            Is false: ${isFalse}
+        `;
+
+        // Expressions
+        let sum = 10 + 5; // 15
+        let isAdult = age >= 18;
+        let complexExpression = (10 + 5) * 2 - (6 / 3);
+
+        document.getElementById("expressionsOutput").innerHTML = `
+            Sum: ${sum} <br>
+            Is adult: ${isAdult} <br>
+            Complex expression: ${complexExpression}
+        `;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <title> JavaScript Handling Event </title>
+
+</head>
+
+<body>
+    <form onsubmit="alert('Form data will be submitted to the server!');">
+        <label for="name">Name</label>
+        <input type="text" onfocus="focusfunc(this)" onblur="alert('Text input loses focus!')" required>
+        <br><br>
+        <label for="mobile">Mobile Company</label>
+        <select onchange="alert('You have changed the selection!');" required>
+            <option>Select</option>   
+            <option>OnePlus</option>   
+            <option>Samsung</option>   
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+
+        function focusfunc(elm){
+            elm.style.background = "lightgreen";
+
+        }    
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <section style="border: 1px solid #000;">
+        <h2>Mouse Event Handler</h2>
+        <h4>On Click Event</h4>
+        <button onclick="fun()">Click Me</button>
+
+        <h4>Double Click Event</h4>
+        <button ondblclick="fun()">Double Click on Me</button>
+
+        <h4>Right Click Event</h4>
+        <button oncontextmenu="fun()">Right Click on Me</button>
+
+        <h4>Mouse Enter or Hover Event</h4>
+        <button onmouseenter="fun()">Hover on Me</button>
+
+        <h4>Mouse Out Event</h4>
+        <button onmouseout="fun()">Mouse out</button>
+        <script>
+            element.addEventListener("click", myFunction);
+
+            function fun() {
+            alert ("Hello World!");
+            }
+        </script>
+    </section>
+    
+</body>
+</html>
