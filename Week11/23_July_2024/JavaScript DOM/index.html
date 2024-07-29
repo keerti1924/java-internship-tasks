@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal and Style Change</title>
+    <style>
+        .container {
+            padding: 100px;
+            background-color: #d5d1d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            border: 2px solid #ccc;
+            text-align: center;
+        }
+        .box1 { 
+            background-color: #ff0202;
+        }
+        .box2 { 
+            background-color: #ed4949;
+        }
+        .box3 { 
+            background-color: #ff3c3c;
+        }
+        .box1, .box2, .box3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            button{
+                border: none;
+                padding: 10px;
+                background-color: rgb(10, 88, 172);
+                color: #fff;
+                padding-left: 30px;
+                padding-right: 30px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="box1" class="box box1">Box 1</div>
+        <div id="box2" class="box box2">Box 2</div>
+        <div id="box3" class="box box3">Box 3</div>
+    </div>
+
+    <div class="button">
+        <button onclick="changeStyles()">Change Styles</button>
+    </div>
+
+    <script>
+        function changeStyles() {
+            // Traverse DOM and apply style changes
+            const container = document.querySelector('.container');
+
+            // Get all elements with the class 'box'
+            const boxes = container.querySelectorAll('.box');
+
+            // Loop through each box and change styles
+            boxes.forEach((box, index) => {
+                // Change background color
+                box.style.backgroundColor = getRandomColor();
+
+                // Change border style
+                box.style.borderColor = getRandomColor();
+                
+                // Change width and height
+                box.style.width = '150px';
+                box.style.height = '150px';
+
+                // Add shadow
+                box.style.boxShadow = '3px 3px 10px rgba(0, 0, 0, 0.3)';
+            });
+        }
+
+        function getRandomColor() {
+            // Generate a random color in hex format
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>

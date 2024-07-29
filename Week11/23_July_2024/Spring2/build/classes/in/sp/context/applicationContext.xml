@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+ 	<bean class="in.sp.beans.skill" id="s1">
+		<property name="web" value="MEAN Stack"></property>
+		<property name="cloud" value="AWS"></property>
+		<property name="ai" value="Python"></property>
+		<property name="data" value="Data Science"></property>
+	</bean>
+	
+	<bean class="in.sp.beans.Employee" id="emp1">
+		<property name="name" value="Keerti"></property>
+		<property name="email" value="keerti@gmail.com"></property>
+		<property name="phone" value="8954678945"></property>
+		<property name="skill" ref="s1"></property>
+	</bean>
+	
+	<!--<bean class="in.sp.beans.Employee" id="emp1">
+		<constructor-arg value="Keerti"></constructor-arg>
+		<constructor-arg value="keerti@gmail.com"></constructor-arg>
+		<constructor-arg value="8954678945"></constructor-arg>
+		<constructor-arg value="FSD"></constructor-arg>
+	</bean>-->
+
+</beans>

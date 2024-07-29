@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="main">Students Name</h2>
+    <ul class="list-items">
+        <li>Ajay</li>
+        <li>Keerti</li>
+        <li>Shubham</li>
+        <li>Bunny</li>
+    </ul>
+    <script>
+        var a = document.getElementById("main");
+        console.log(a);
+        console.dir(a);
+        
+        var b = document.getElementsByClassName("list-items");
+        console.log(b);
+        
+        var b = document.querySelectorAll(".list-items");
+        console.log(b);
+
+        //modifying dom elements
+
+        var a = document.getElementById("main");
+        // a.innerHTML = "<h2>Employees Names</h2>";
+        a.innerText = "Employees Names";
+        a.style.color = "white";
+        a.style.backgroundColor = "green";
+        console.log(a);
+
+        //Creating dom elements
+        var a1 = document.querySelector("ul");
+        var a2 = document.querySelector("li");
+
+        a1.append(a2);
+        a2.innerHTML = "Prinshi";
+        a2.style.color="red";
+        a2.setAttribute("class", "list-items");
+        console.log(a2);
+
+
+    </script>
+</body>
+</html>
