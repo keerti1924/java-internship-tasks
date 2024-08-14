@@ -34,9 +34,10 @@ This repository is organized by task. Each task has its own dedicated directory 
 ## Technologies Used
 
 - **Backend:** Java, Spring Boot
-- **Frontend:** Java, HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
 - **Database:** MySQL
 - **Code Editor:** Notepad++, Sublime text, VS Code etc
+- **IDE:** Eclipse
 - **Self-paced Content**
 
 ## Getting Started
@@ -52,8 +53,8 @@ This repository is organized by task. Each task has its own dedicated directory 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/java-fsd-internship.git
-   cd java-fsd-internship
+   git clone https://github.com/keerti1924/java-internship-tasks.git
+   cd java-internship-tasks
 
 2. **Install dependencies and start the application:**
 
