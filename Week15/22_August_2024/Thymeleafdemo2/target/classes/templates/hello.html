@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Expressions Example</title>
+</head>
+<body>
+    <!-- Variable Expression -->
+    <h1 th:text="${message}"></h1>
+
+    <!-- Selection Expression -->
+    <p th:text="'Welcome, ' + ${user.name}"></p>
+
+
+    <!-- Link Expression -->
+    <a th:href="@{/}">Go to Home</a>
+
+</body>
+</html>

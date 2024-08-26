@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Iteration Example</title>
+</head>
+<body>
+    <!-- Dynamic Text with th:text -->
+    <h1 th:text="${message}">Default Message</h1>
+
+    <!-- Iteration with th:each -->
+    <ul>
+        <li th:each="item : ${items}" th:text="${item}">Item</li>
+    </ul>
+
+    <!-- Conditional Attribute Setting with th:attr -->
+    <a th:href="@{/items}" th:attr="title=${message}">Go to Items</a>
+</body>
+</html>
