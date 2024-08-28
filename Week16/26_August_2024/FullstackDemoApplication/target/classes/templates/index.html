@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #message {
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Full-Stack Application</h1>
+    <div id="message">Loading message...</div>
+    
+    <script>
+        fetch('/api/message')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').textContent = data.message;
+            })
+            .catch(error => {
+                document.getElementById('message').textContent = 'Error loading message.';
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
